@@ -389,7 +389,6 @@ class A123CortexMDataset(InMemoryDataset):
                     {
                         "session_file": f,
                         "session_id": session_id,
-                        "layer": -1,
                         "bf_bin": int(bin_idx),
                         "neuron_indices": combined_sel.tolist(),
                         "corr": subcorr.astype(float),
@@ -476,7 +475,6 @@ class A123CortexMDataset(InMemoryDataset):
         data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr, y=y)
         # attach metadata
         data.session_id = int(sample.get("session_id", -1))
-        data.layer = int(sample.get("layer", -1))
         return data
 
     def _extract_triangles_from_graphs(self) -> list:
