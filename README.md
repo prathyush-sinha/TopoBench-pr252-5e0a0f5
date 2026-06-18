@@ -1,6 +1,6 @@
 # TopoBench A123 Contribution Snapshot
 
-> **Recruiter note:** This repository is a TopoBench snapshot documenting my A123 auditory cortex graph-construction and CWN tutorial contribution. See [`README_contribution.md`](./README_contribution.md) for the detailed explanation of my individual work.
+> **Note:** This repository is a TopoBench snapshot documenting my A123 auditory cortex graph-construction and CWN tutorial contribution. See [`README_contribution.md`](./README_contribution.md) for the detailed explanation of my individual work.
 
 ## What I contributed
 
@@ -10,7 +10,7 @@ I also added tutorial coverage for training TopoBench/TBModel on the A123 audito
 
 ## Key files to review
 
-- [`README_contribution.md`](./README_contribution.md) — detailed recruiter-facing summary of my contribution.
+- [`README_contribution.md`](./README_contribution.md) — detailed summary of my contribution.
 - [`topobench/data/datasets/a123.py`](./topobench/data/datasets/a123.py) — A123 graph construction and PyTorch Geometric data conversion logic.
 - [`tutorials/tutorial_train_brain_model_CWN.ipynb`](./tutorials/tutorial_train_brain_model_CWN.ipynb) — cleaned CWN/TopoModelX tutorial for A123 graph-level classification.
 - [`tutorials/tutorial_train_a123_clean.ipynb`](./tutorials/tutorial_train_a123_clean.ipynb) — clean general A123 training walkthrough.
@@ -18,7 +18,7 @@ I also added tutorial coverage for training TopoBench/TBModel on the A123 audito
 ## Related pull requests
 
 - [PR #1](https://github.com/prathyush-sinha/TopoBench-pr252-5e0a0f5/pull/1) — original A123 graph-construction and tutorial contribution.
-- [PR #2](https://github.com/prathyush-sinha/TopoBench-pr252-5e0a0f5/pull/2) — cleanup PR that added recruiter-facing documentation and clean tutorial material.
+- [PR #2](https://github.com/prathyush-sinha/TopoBench-pr252-5e0a0f5/pull/2) — cleanup PR that added documentation and clean tutorial material.
 
 ## Technical context
 
