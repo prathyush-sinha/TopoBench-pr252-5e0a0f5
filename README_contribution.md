@@ -51,8 +51,8 @@ Current reproducibility status:
 - Dataset/task: A123 auditory cortex graph-level classification.
 - Model path: CWN/TopoModelX through TopoBench `TBModel`.
 - What ran successfully: tutorial configuration and integration code were prepared for loading the A123 dataset, applying cell-complex lifting, constructing the CWN model stack, and running Lightning training.
-- Metrics/screenshots/logs: no final benchmark metrics are committed in this repository snapshot. Add validated training logs or a metrics table before claiming model performance in a resume or recruiter discussion.
+- Metrics/screenshots/logs: no final benchmark metrics are committed in this repository snapshot. Add validated training logs or a metrics table before claiming model performance.
 
-## Recruiter-facing interpretation
+## Portfolio interpretation
 
 This repo should be read as evidence of hands-on work with graph construction, neurodata preprocessing, topological deep learning tooling, and TopoBench/TopoModelX model integration. The strongest contribution is the A123 graph-construction logic plus the CWN tutorial that shows how the processed graphs can be used in a topological neural network workflow.
