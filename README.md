@@ -26,9 +26,23 @@ This work uses TopoBench and TopoModelX for topological deep learning workflows.
 
 The important engineering contribution is the dataset-processing path: session/frequency-bin graph construction, correlation-thresholded graph generation, PyG `Data` object creation, and tutorial integration with CWN-style topological neural network training.
 
-## Results/status
+## Experimental results
 
-This snapshot documents the data-processing and model-integration work. No final benchmark metrics are claimed in this README because validated training logs or a metrics table are not committed yet.
+The project evaluated graph, simplicial-complex, cellular-complex, hypergraph, and point-cloud style models on the A123 graph-level classification task. Results were averaged/reported from the best rerun setting described in the final project report.
+
+| Domain | Model | Validation accuracy | Test accuracy | Train accuracy |
+|---|---:|---:|---:|---:|
+| Graph | GCN | 0.2342 | 0.1754 | 0.4952 |
+| Graph | GAT | 0.2432 | 0.1491 | 0.3600 |
+| Graph | GIN | 0.2613 | 0.1579 | 0.1143 |
+| Simplicial complex | SCCNN | 0.2523 | 0.1491 | 0.3810 |
+| Cellular complex | CWN | **0.2703** | **0.2632** | **0.5886** |
+| Hypergraph | AllSetTransformer | 0.2432 | 0.1579 | 0.4800 |
+| Point cloud / set | DeepSet | 0.2252 | 0.1053 | 0.5272 |
+
+CWN with CellCycle lifting achieved the highest test accuracy, 0.2632, compared with the best graph baseline, GCN, at 0.1754. This is about a 50% relative improvement over the best graph baseline, suggesting that the cellular-complex representation may capture useful higher-order structure in the neuronal correlation graphs.
+
+The report also notes an important limitation: the dataset is small, with roughly 250 graph samples, so these numbers should be interpreted as an initial benchmark rather than a definitive performance claim.
 
 ## Upstream project
 
