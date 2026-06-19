@@ -42,17 +42,24 @@ The CWN tutorial demonstrates how to use:
 - `PropagateSignalDown`
 - TopoBench loss, optimizer, and evaluator components
 
-## Results/status
+## Experimental results
 
-This snapshot documents the data-processing and model-integration work. The tutorial notebooks are cleaned so they do not include local machine paths or captured execution output.
+The project evaluated graph, simplicial-complex, cellular-complex, hypergraph, and point-cloud style models on the A123 graph-level classification task. Results were averaged/reported from the best rerun setting described in the final project report.
 
-Current reproducibility status:
+| Domain | Model | Validation accuracy | Test accuracy | Train accuracy |
+|---|---:|---:|---:|---:|
+| Graph | GCN | 0.2342 | 0.1754 | 0.4952 |
+| Graph | GAT | 0.2432 | 0.1491 | 0.3600 |
+| Graph | GIN | 0.2613 | 0.1579 | 0.1143 |
+| Simplicial complex | SCCNN | 0.2523 | 0.1491 | 0.3810 |
+| Cellular complex | CWN | **0.2703** | **0.2632** | **0.5886** |
+| Hypergraph | AllSetTransformer | 0.2432 | 0.1579 | 0.4800 |
+| Point cloud / set | DeepSet | 0.2252 | 0.1053 | 0.5272 |
 
-- Dataset/task: A123 auditory cortex graph-level classification.
-- Model path: CWN/TopoModelX through TopoBench `TBModel`.
-- What ran successfully: tutorial configuration and integration code were prepared for loading the A123 dataset, applying cell-complex lifting, constructing the CWN model stack, and running Lightning training.
-- Metrics/screenshots/logs: no final benchmark metrics are committed in this repository snapshot. Add validated training logs or a metrics table before claiming model performance.
+CWN with CellCycle lifting achieved the highest test accuracy, 0.2632, compared with the best graph baseline, GCN, at 0.1754. This is about a 50% relative improvement over the best graph baseline, suggesting that the cellular-complex representation may capture useful higher-order structure in the neuronal correlation graphs.
+
+The report also notes an important limitation: the dataset is small, with roughly 250 graph samples, so these numbers should be interpreted as an initial benchmark rather than a definitive performance claim.
 
 ## Portfolio interpretation
 
-This repo should be read as evidence of hands-on work with graph construction, neurodata preprocessing, topological deep learning tooling, and TopoBench/TopoModelX model integration. The strongest contribution is the A123 graph-construction logic plus the CWN tutorial that shows how the processed graphs can be used in a topological neural network workflow.
+This repo should be read as evidence of hands-on work with graph construction, neurodata preprocessing, topological deep learning tooling, TopoBench/TopoModelX model integration, and cross-domain benchmarking. The strongest contribution is the A123 graph-construction logic plus the CWN tutorial that shows how the processed graphs can be used in a topological neural network workflow.
